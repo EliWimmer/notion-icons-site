@@ -1,0 +1,11 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="media-reading-writing/microphone-simple">
+<rect id="Rectangle 37" opacity="0.2" x="5" y="5" width="38" height="38" rx="4" fill="black"/>
+<g id="Group 29" opacity="0.66">
+<path id="Vector 57" d="M14 17V27C14 32.5228 18.4772 37 24 37V37" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 58" d="M34 17V27C34 32.5228 29.5228 37 24 37V37" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Subtract" opacity="0.6" d="M18 24V27C18 30.3137 20.6863 33 24 33C27.3137 33 30 30.3137 30 27V24H18Z" fill="black"/>
+<path id="Subtract_2" d="M24 7C20.6863 7 18 9.68629 18 13V24H30V13C30 9.68629 27.3137 7 24 7Z" fill="black"/>
+</g>
+</svg>

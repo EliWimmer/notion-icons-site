@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="numbers/dice-04">
+<rect id="Rectangle 1" opacity="0.2" x="5" y="5" width="38" height="38" rx="4" fill="black"/>
+<circle id="Ellipse 21" cx="16" cy="32" r="4" transform="rotate(90 16 32)" fill="black"/>
+<circle id="Ellipse 24" cx="32" cy="32" r="4" transform="rotate(90 32 32)" fill="black"/>
+<circle id="Ellipse 22" cx="16" cy="16" r="4" transform="rotate(90 16 16)" fill="black"/>
+<circle id="Ellipse 25" cx="32" cy="16" r="4" transform="rotate(90 32 16)" fill="black"/>
+</g>
+</svg>

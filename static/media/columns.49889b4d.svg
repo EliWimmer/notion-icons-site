@@ -1,0 +1,7 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="date-events/columns">
+<rect id="Rectangle 1" opacity="0.2" x="5" y="5" width="38" height="38" rx="4" fill="black"/>
+<path id="Rectangle 2" d="M5 13C5 9.22876 5 7.34315 6.17157 6.17157C7.34315 5 9.22876 5 13 5H35C38.7712 5 40.6569 5 41.8284 6.17157C43 7.34315 43 9.22876 43 13V15H5V13Z" fill="black"/>
+<path id="Intersect" opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M5 15V35C5 38.7712 5 40.6569 6.17157 41.8284C7.23467 42.8915 8.8857 42.99 12 42.9991L12 15H5ZM26 43H19L19 15H26L26 43ZM40 42.748C38.8423 43 37.2596 43 35 43H33L33 15H40V42.748Z" fill="black"/>
+</g>
+</svg>
