@@ -1,0 +1,16 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="misc/box">
+<rect id="Rectangle 37" opacity="0.2" x="5" y="5" width="38" height="38" rx="4" fill="black"/>
+<path id="Vector 54" opacity="0.6" d="M24 5H7.47214C5.95705 5 4.572 5.85601 3.89443 7.21115L0.723608 13.5528C0.391157 14.2177 0.874652 15 1.61803 15H16.5279C18.043 15 19.428 14.144 20.1056 12.7889L24 5Z" fill="black"/>
+<path id="Subtract" opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M7.47063 5H23.9985L12.9994 5C9.2282 5 7.34258 5 6.17101 6.17158C4.99943 7.34315 4.99943 9.22877 4.99943 13V15H1.61652C0.873142 15 0.389647 14.2177 0.722098 13.5528L3.89292 7.21115C4.57048 5.85601 5.95554 5 7.47063 5Z" fill="black"/>
+<path id="Vector 53" d="M24 5H40.5279C42.043 5 43.428 5.85601 44.1056 7.21115L47.2764 13.5528C47.6088 14.2177 47.1253 15 46.382 15H31.4721C29.957 15 28.572 14.144 27.8944 12.7889L24 5Z" fill="black"/>
+<path id="Vector 55" d="M24 5H40.5279C42.043 5 43.428 5.85601 44.1056 7.21115L47.2764 13.5528C47.6088 14.2177 47.1253 15 46.382 15H31.4721C29.957 15 28.572 14.144 27.8944 12.7889L24 5Z" fill="black"/>
+<mask id="mask0_42:562" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="38" height="38">
+<rect id="Rectangle 144" x="5" y="5" width="38" height="38" rx="4" fill="#66AADA"/>
+</mask>
+<g mask="url(#mask0_42:562)">
+<path id="Rectangle 143" opacity="0.6" d="M43 5H24V43H35C38.7712 43 40.6569 43 41.8284 41.8284C43 40.6569 43 38.7712 43 35V5Z" fill="black"/>
+<path id="Subtract_2" fill-rule="evenodd" clip-rule="evenodd" d="M5 5.85535C5.69239 5.31119 6.55863 5 7.47214 5H5V5.85535ZM5 15V35C5 38.7712 5 40.6569 6.17157 41.8284C7.34315 43 9.22876 43 13 43H24V5L20.1056 12.7889C19.428 14.144 18.043 15 16.5279 15H5Z" fill="black"/>
+</g>
+</g>
+</svg>
