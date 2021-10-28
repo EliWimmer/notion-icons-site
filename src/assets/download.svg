@@ -1,4 +1,6 @@
 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect opacity="0.2" width="48" height="48" rx="8" fill="#9FA4A9"/>
-<path d="M24 10L24 38M24 38L34 27.8182M24 38L14 27.8182" stroke="#9FA4A9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="arrows/nobg-up-right">
+<rect id="Rectangle 168" opacity="0.8" x="19" y="6" width="10" height="27" rx="2" fill="#9FA4A9"/>
+<path id="Vector 74" d="M7.41421 28.4142L22.5858 43.5858C23.3668 44.3668 24.6332 44.3668 25.4142 43.5858L40.5858 28.4142C41.3668 27.6332 41.3668 26.3668 40.5858 25.5858L36.4142 21.4142C35.6332 20.6332 34.3668 20.6332 33.5858 21.4142L25.4142 29.5858C24.6332 30.3668 23.3668 30.3668 22.5858 29.5858L14.4142 21.4142C13.6332 20.6332 12.3668 20.6332 11.5858 21.4142L7.41421 25.5858C6.63317 26.3668 6.63316 27.6332 7.41421 28.4142Z" fill="#9FA4A9"/>
+</g>
 </svg>
