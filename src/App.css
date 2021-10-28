@@ -481,3 +481,49 @@ cursor: pointer;
   z-index: 1;
   max-width: 700px;
 }
+
+@media only screen and (max-width: 650px) {
+  .header {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+  .main-body {
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 4px;;
+  }
+  .options-container {
+    flex-direction: column;
+    width: fit-content;
+    margin-left: 16px;
+  }
+
+  .settings-container {
+    flex-direction: column;
+    position: relative;
+    width: fit-content;
+  }
+
+  .options-divider {
+    display: none;
+  }
+
+  .tag-button, .copy-link, .download, .display-mode, .color-option {
+    width: 32px;
+    height: 32px;
+    margin: 8px 0px;
+  }
+  .icon-grid {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    column-gap: 0px;
+    margin: 4px;
+  }
+  .category-tags {
+    display: none;
+  }
+}
