@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.8918539f.chunk.css",
-    "main.js": "/static/js/main.eacccc69.chunk.js",
-    "main.js.map": "/static/js/main.eacccc69.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f26ab351.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f26ab351.js.map",
+    "main.js": "/static/js/main.373431ad.chunk.js",
+    "main.js.map": "/static/js/main.373431ad.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.bf22756a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.bf22756a.js.map",
     "static/js/2.8f0332dc.chunk.js": "/static/js/2.8f0332dc.chunk.js",
     "static/js/2.8f0332dc.chunk.js.map": "/static/js/2.8f0332dc.chunk.js.map",
-    "static/js/3.962f56ef.chunk.js": "/static/js/3.962f56ef.chunk.js",
-    "static/js/3.962f56ef.chunk.js.map": "/static/js/3.962f56ef.chunk.js.map",
+    "static/js/3.77aa22e2.chunk.js": "/static/js/3.77aa22e2.chunk.js",
+    "static/js/3.77aa22e2.chunk.js.map": "/static/js/3.77aa22e2.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.8918539f.chunk.css.map": "/static/css/main.8918539f.chunk.css.map",
     "static/js/2.8f0332dc.chunk.js.LICENSE.txt": "/static/js/2.8f0332dc.chunk.js.LICENSE.txt",
@@ -113,6 +113,8 @@
     "static/media/coffee-simple.svg": "/static/media/coffee-simple.c1bc8d9d.svg",
     "static/media/coffee.162c27c0.svg": "/static/media/coffee.162c27c0.svg",
     "static/media/coffee.svg": "/static/media/coffee.894e6f40.svg",
+    "static/media/coin-1.svg": "/static/media/coin-1.884da20f.svg",
+    "static/media/coin.svg": "/static/media/coin.f5d5f98b.svg",
     "static/media/coloroption.ad21d965.svg": "/static/media/coloroption.ad21d965.svg",
     "static/media/columns.svg": "/static/media/columns.49889b4d.svg",
     "static/media/construction-simple.svg": "/static/media/construction-simple.f3fe760c.svg",
@@ -431,8 +433,10 @@
     "static/media/serif-y.svg": "/static/media/serif-y.2f90f083.svg",
     "static/media/serif-z-simple.svg": "/static/media/serif-z-simple.1fa38e09.svg",
     "static/media/serif-z.svg": "/static/media/serif-z.0d41b612.svg",
+    "static/media/shop-1.svg": "/static/media/shop-1.c71e2979.svg",
     "static/media/shop-basket.svg": "/static/media/shop-basket.6dd949bd.svg",
     "static/media/shop-simple.svg": "/static/media/shop-simple.3fd25617.svg",
+    "static/media/shop.svg": "/static/media/shop.e05ae2ef.svg",
     "static/media/sleep-simple.svg": "/static/media/sleep-simple.c247850a.svg",
     "static/media/sleep.svg": "/static/media/sleep.f4535423.svg",
     "static/media/subtract-simple.svg": "/static/media/subtract-simple.a1b27101.svg",
@@ -455,6 +459,8 @@
     "static/media/triangle-ruler-simple.svg": "/static/media/triangle-ruler-simple.cb3dc15c.svg",
     "static/media/triangle-ruler.svg": "/static/media/triangle-ruler.dbc373c2.svg",
     "static/media/tuesday.svg": "/static/media/tuesday.b37b4e7e.svg",
+    "static/media/twitter-1.svg": "/static/media/twitter-1.ea61e64b.svg",
+    "static/media/twitter.svg": "/static/media/twitter.27736b3c.svg",
     "static/media/twitter.65bd38aa.svg": "/static/media/twitter.65bd38aa.svg",
     "static/media/video-simple.svg": "/static/media/video-simple.51c84d92.svg",
     "static/media/video.svg": "/static/media/video.0d3853d5.svg",
@@ -494,9 +500,9 @@
     "static/media/zap.svg": "/static/media/zap.05cb3b12.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f26ab351.js",
+    "static/js/runtime-main.bf22756a.js",
     "static/js/2.8f0332dc.chunk.js",
     "static/css/main.8918539f.chunk.css",
-    "static/js/main.eacccc69.chunk.js"
+    "static/js/main.373431ad.chunk.js"
   ]
 }
