@@ -11,6 +11,7 @@
   100% {
     transform: translateX(48px);
     width: 32px;
+
   }
 }
 @keyframes toggleFalse {
