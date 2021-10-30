@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@keyframes toggleTrue {
+  0% {
+    transform: translateX(0);
+    width: 32px;
+  }
+  50% {
+    width: 44px;
+  }
+  100% {
+    transform: translateX(48px);
+    width: 32px;
+  }
+}
+@keyframes toggleFalse {
+  0% {
+    transform: translateX(48px);
+    width: 32px;
+  }
+    50% {
+        width: 44px;
+    }
+  100% {
+    transform: translateX(0);
+    width: 32px;
+  }
+}
+
+.toggle-container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    position: relative;
+}
+
+.toggle-label {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: 8px;
+    color:rgba(159, 164, 169, 1)
+}
+
+
+.state-text {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 10px;
+    margin-top: 4px;
+    color:rgba(159, 164, 169, .7)
+}
+
+.tooltip {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 10px;
+    margin-top: 4px;
+    color:rgba(159, 164, 169, .7);
+    position: absolute;
+    top: 96px;
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    display: none;
+    transition: .3s ease-in-out;
+    width: 140px;
+}
+
+.tooltip.show {
+    display: block;
+}
+.tooltip.darkmode-true {
+    background-color: #3F4447;
+    color: #EBEBEB;
+}
+
+.tooltip.darkmode-falsee {
+    background-color: #FAFAFA;
+    color: #37352F;
+}
+
+.settings-toggle {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    width: 88px;
+    background-color: rgba(159, 164, 169, .2);
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1) inset;
+}
+
+.settings-toggle:hover {
+    cursor: pointer;
+}
+
+.settings-toggle-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    position: absolute;
+    margin: 0px 4px;
+    transition: .3s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.settings-toggle-icon.state-true {
+    animation: toggleTrue .3s ease-in-out forwards;
+}
+
+.settings-toggle-icon.state-false {
+    animation: toggleFalse .3s ease-in-out forwards;
+}
+
+.icon-one.state-true {
+    opacity: 0%;
+}
+
+.icon-two.state-true {
+    opacity: 100%;
+}
+
+.icon-one.state-false {
+    opacity: 100%;
+}
+
+.icon-two.state-false {
+    opacity: 0%;
+}
+
+.darkmode-true {
+    background-color: #2F3437;
+}
+
+.darkmode-false {
+    background-color: white;
+}
+.settings-toggle-icon img {
+    width: 28px;
+    height: 28px;
+}

@@ -1,7 +1,0 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="misc/construction-simple">
-<rect id="Rectangle 1" opacity="0.2" x="5" y="5" width="38" height="38" rx="4" fill="black"/>
-<rect id="Rectangle 75" opacity="0.2" x="10" y="10" width="28" height="28" rx="4" fill="black"/>
-<path id="Intersect" fill-rule="evenodd" clip-rule="evenodd" d="M23.1359 10H18C14.2288 10 12.3431 10 11.1716 11.1716C10 12.3431 10 14.2288 10 18V23.1359L23.1359 10ZM20.3256 38H18C14.2288 38 12.3431 38 11.1716 36.8284C10.8218 36.4787 10.5765 36.0653 10.4044 35.5571L35.5571 10.4044C36.0653 10.5765 36.4787 10.8218 36.8284 11.1716C38 12.3431 38 14.2288 38 18V20.3256L20.3256 38ZM37.9895 32.1157C37.9495 34.5235 37.7567 35.9001 36.8284 36.8284C35.9001 37.7567 34.5235 37.9495 32.1157 37.9895L37.9895 32.1157Z" fill="black"/>
-</g>
-</svg>
