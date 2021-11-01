@@ -1,571 +1,246 @@
+import SettingsToggle from "./assets/components/js/settingsToggle";
+import SettingsRadio from "./assets/components/js/settingsRadio";
+import SettingsButton from "./assets/components/js/settingsButton";
+import SettingsColors from "./assets/components/js/settingsColors";
+import IconFolders from "./assets/components/js/iconFolders";
+import IconGrid from "./assets/components/js/iconGrid";
+
+import link from "./assets/uiIcons/link.svg";
+import download from "./assets/uiIcons/download.svg";
+import lightmode from "./assets/uiIcons/lightmode.svg";
+import darkmode from "./assets/uiIcons/darkmode.svg";
+import iconsimple from "./assets/uiIcons/iconsimple.svg";
+import iconfancy from "./assets/uiIcons/iconfancy.svg";
+import iconboth from "./assets/uiIcons/iconboth.svg";
+import labelshow from "./assets/uiIcons/labelshow.svg";
+import labelhide from "./assets/uiIcons/labelhide.svg";
+import settings from "./assets/uiIcons/settings.svg";
+import info from "./assets/uiIcons/info.svg";
+import logo from "./assets/uiIcons/logo.svg";
+import sizesmall from "./assets/uiIcons/sizesmall.svg";
+import sizelarge from "./assets/uiIcons/sizelarge.svg";
+import folderopen from "./assets/uiIcons/folderopen.svg";
+import folderclosed from "./assets/uiIcons/folderclosed.svg";
+import coffee from "./assets/uiIcons/coffee.svg";
+import twitter from "./assets/uiIcons/twitter.svg";
+import person from "./assets/uiIcons/person.svg";
+
 import { useState } from "react";
-import lightmode from "./assets/lightmode.svg";
-import darkmode from "./assets/darkmode.svg";
-import coloroptionimage from "./assets/coloroption.svg";
-import copylink from "./assets/link.svg";
-import download from "./assets/download.svg";
-import tagbutton from "./assets/tagbutton.svg";
-import logo from "./assets/logo.svg";
-import coffee from "./assets/coffee.svg";
-import twitter from "./assets/twitter.svg";
 import "./App.css";
 
+
 function App() {
-  const [colorMode, setColorMode] = useState("light");
-  const [iconColors, setIconColors] = useState("gray");
-  const [downloadMode, setDownloadMode] = useState("link");
-  const [activeTag, setActiveTag] = useState("all");
-  const [tagsVisible, setTagsVisible] = useState(false);
-  const colorOptions = [
-    "gray",
-    "brown",
-    "orange",
-    "yellow",
-    "green",
-    "blue",
-    "purple",
-    "pink",
-    "red",
-  ];
-  const tags = [
-    {
-      name: "All",
-      folder: "all",
-    },
-    {
-      name: "Letters",
-      folder: "letters",
-    },
-    {
-      name: "Numbers",
-      folder: "numbers",
-    },
-    {
-      name: "Date & Events",
-      folder: "date-events",
-    },
-    {
-      name: "Years",
-      folder: "years",
-    },
-    {
-      name: "Months",
-      folder: "months",
-    },
-    {
-      name: "Days",
-      folder: "days",
-    },
-    {
-      name: "Weeks",
-      folder: "weeks",
-    },
-    {
-      name: "Time",
-      folder: "time",
-    },
-    {
-      name: "Shapes",
-      folder: "shapes",
-    },
-    {
-      name: "Arrows",
-      folder: "arrows",
-    },
-    {
-      name: "Business & Money",
-      folder: "biz-money",
-    },
-    {
-      name: "Media, Reading, & Writing",
-      folder: "media-reading-writing",
-    },
-    {
-      name: "Files, Folders, & Data",
-      folder: "files-folders-data",
-    },
-    {
-      name: "Internet & Communication",
-      folder: "internet-communication",
-    },
-    {
-      name: "Math & Symbols",
-      folder: "math-symbols",
-    },
-    {
-      name: "Tasks & Office",
-      folder: "tasks-office",
-    },
-    {
-      name: "Misc",
-      folder: "misc",
-    },
-  ];
+  // STATES
+  const [infoVisibility, setInfoVisibility] = useState(false);
+  const [menuVisibility, setMenuVisibility] = useState(false);
+  const [foldersVisibility, setFoldersVisibility] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+  const [downloadMode, setDownloadMode] = useState(false);
+  const [iconStyle, setIconStyle] = useState("simple");
+  const [iconLabel, setIconLabel] = useState(false);
+  const [iconColor, setIconColor] = useState("gray");
+  const [iconFolder, setIconFolder] = useState("all");
+  const [iconSize, setIconSize] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [notification, setNotification] = useState(false);
 
-  function importAll(r) {
-    return r.keys().map(r);
+  // DATA SETS
+  
+  // FUNCTIONS
+
+  function handleSearch(e) {
+    e.preventDefault();
+    setSearchQuery(e.target.value);
   }
-  const letters = importAll(
-    require.context(`../icons/svg/letters`, false, /\.(svg)$/)
-  );
-  const numbers = importAll(
-    require.context(`../icons/svg/numbers`, false, /\.(svg)$/)
-  );
-  const dateEvents = importAll(
-    require.context(`../icons/svg/date-events`, false, /\.(svg)$/)
-  );
-  const years = importAll(
-    require.context(`../icons/svg/years`, false, /\.(svg)$/)
-  );
-  const months = importAll(
-    require.context(`../icons/svg/months`, false, /\.(svg)$/)
-  );
-  const days = importAll(
-    require.context(`../icons/svg/days`, false, /\.(svg)$/)
-  );
-  const weeks = importAll(
-    require.context(`../icons/svg/weeks`, false, /\.(svg)$/)
-  );
-  const time = importAll(
-    require.context(`../icons/svg/time`, false, /\.(svg)$/)
-  );
-  const shapes = importAll(
-    require.context(`../icons/svg/shapes`, false, /\.(svg)$/)
-  );
-  const arrows = importAll(
-    require.context(`../icons/svg/arrows`, false, /\.(svg)$/)
-  );
-  const bizMoney = importAll(
-    require.context(`../icons/svg/biz-money`, false, /\.(svg)$/)
-  );
-  const mediaReadingWriting = importAll(
-    require.context(`../icons/svg/media-reading-writing`, false, /\.(svg)$/)
-  );
-  const filesFoldersData = importAll(
-    require.context(`../icons/svg/files-folders-data`, false, /\.(svg)$/)
-  );
-  const internetCommunication = importAll(
-    require.context(`../icons/svg/internet-communication`, false, /\.(svg)$/)
-  );
-  const mathSymbols = importAll(
-    require.context(`../icons/svg/math-symbols`, false, /\.(svg)$/)
-  );
-  const tasksOffice = importAll(
-    require.context(`../icons/svg/tasks-office`, false, /\.(svg)$/)
-  );
-  const misc = importAll(
-    require.context(`../icons/svg/misc`, false, /\.(svg)$/)
-  );
 
-  function confirmNotification(message) {
-    // create a new notification wrapped in innerHTML div below class options-container
-    const notification = document.createElement("div");
-    notification.classList.add("notification");
-    notification.innerHTML = `
-      <div class="notification-message ${colorMode}">${message}</div>
-    `;
-    // append the notification to the options-container
-    document.querySelector(".options-container").appendChild(notification);
-    // remove the notification after 3 seconds
+  function notificationPopup(message) {
+    const notification = document.getElementById("notification");
+    notification.innerHTML = message;
+    setNotification(true);
     setTimeout(() => {
-      document.querySelector(".options-container").removeChild(notification);
+      setNotification(false);
     }, 3000);
   }
 
-  function handleIconClick(icon, e) {
-    var fileName = icon.substring(icon.lastIndexOf("/") + 1, icon.indexOf("."));
-    // get attribute folder of clicked icon
-    var folder = e.target.getAttribute("folder");
-    const iconURL = `https://raw.githubusercontent.com/EliWimmer/notion-icons-repo/main/icons/${iconColors}/${folder}/${fileName}.png`;
 
-    // if downloadMode is link copy link to clipboard
-    if (downloadMode === "link") {
-      navigator.clipboard
-        .writeText(iconURL)
-        .then(() => {
-          confirmNotification("Copied to clipboard!");
-        })
-        .catch((err) => {
-          console.log("Something went wrong", err);
-        });
-      //if downloadMode is file download icon
-    } else if (downloadMode === "file") {
-      // use fetch to download icon
-      fetch(iconURL)
-        .then((response) => response.blob())
-        .then((blob) => {
-          const url = window.URL.createObjectURL(blob);
-          const a = document.createElement("a");
-          a.style.display = "none";
+  function handleIconClick(url) {
+    const iconUrl = `https://raw.githubusercontent.com/EliWimmer/notion-icons-repo/main/icons-refresh/${iconColor}/${url.folder}%2C${url.style}%2C${url.name}.png`
+
+    // if download mode is false copy iconUrl to clipboard, else download icon
+    if (downloadMode) {
+      downloadFile(iconUrl, url.name, url.style, url.folder, iconColor);
+      notificationPopup("Downloading...")
+    } else {
+      copyToClipboard(iconUrl);
+      notificationPopup("Copied to clipboard")
+    }
+
+    function downloadFile(url, name, style, folder, color) {
+      // use fetch to download file
+      fetch(url)
+        .then(res => res.blob())
+        .then(blob => {
+          let url = window.URL.createObjectURL(blob);
+          let a = document.createElement("a");
           a.href = url;
-          a.download = `${fileName}.png`;
+          a.download = `${color}-${style}-${folder}-${name}.png`;
           document.body.appendChild(a);
           a.click();
-          window.URL.revokeObjectURL(url);
+          document.body.removeChild(a);
         });
-
-      confirmNotification("Downloading...");
+  
     }
-  }
 
+    function copyToClipboard(url) {
+      const el = document.createElement("textarea");
+      el.value = url;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand("copy");
+      document.body.removeChild(el);
+    }
+  };
 
   return (
     <>
-      <div className={`body-wrapper ${colorMode}`}>
-        <div className="header">
-          <h2>
-            <a
-              href="https://www.eliwimmer.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+      <div className={`App darkmode-${darkMode}`}>
+        <div className={`App-header darkmode-${darkMode}`}>
+          <a href="https://www.eliwimmer.com" target="_blank">
+            
+          <h2 className="header-left">
+          <img src={person} alt="person" />
               Eli Wimmer
-            </a>
           </h2>
-          {/* small coffee.svg icon that says Buy me a coffee next to it*/}
+          </a>
           <div className="header-right">
-            <a
-              class="bmac"
-              href="https://www.buymeacoffee.com/eliwimmer"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.buymeacoffee.com/eliwimmer" target="_blank" rel="noopener noreferrer">
               <img src={coffee} alt="Buy me a coffee" />
             </a>
-            <a
-              class="bmac"
-              href="https://twitter.com/eliwimm"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://twitter.com/eliwimm" target="_blank" rel="noopener noreferrer">
               <img src={twitter} alt="Twitter" />
             </a>
           </div>
         </div>
-        <div className={`main-body ${colorMode}`}>
-          <div className={`logo ${iconColors}`}>
-            <img src={logo} alt="logo" />
-          </div>
-          <div className={`options-container ${colorMode}`}>
-            <div className="settings-container">
-              <button
-                className={`display-mode ${colorMode}`}
-                type="button"
-                onClick={() =>
-                  setColorMode(colorMode === "dark" ? "light" : "dark")
-                }
-              >
-                {colorMode === "dark" ? (
-                  <img src={lightmode} alt="lightmode" />
-                ) : (
-                  <img src={darkmode} alt="darkmode" />
-                )}
-              </button>
-
-              <button
-                className={`tag-button ${tagsVisible}`}
-                onClick={() => setTagsVisible(!tagsVisible)}
-              >
-                <img src={tagbutton} alt="tag-button" />
-              </button>
-              <div className={`options-divider`} />
-
-              {colorOptions.map((color, index) => {
-                return (
-                  <button
-                    className={`color-option ${color} ${iconColors === color ? "true" : ""}`}
-                    type="button"
-                    onClick={() => setIconColors(color)}
-                  >
-                    <img src={coloroptionimage} alt="coloroption" />
-                  </button>
-                );
-              })}
-              <div className={`options-divider`} />
-
-              <button
-                className={`copy-link ${downloadMode}`}
-                type="button"
-                onClick={() => {
-                  setDownloadMode("link");
+        <div id="notification" className={`notification-show-${notification} darkmode-${darkMode}`}></div>
+        <div className={`logo ${iconColor}`}>
+          <img src={logo} alt="logo" />
+        </div>
+        <div id="settings-bar" className={`settings-bar darkmode-${darkMode}`}>
+          <div id="main-menu" className="main-menu">
+            <div className="menu-row-one">
+            <SettingsButton
+              boolState={menuVisibility}
+              darkMode={darkMode}
+              icon={settings}
+              icon2={settings}
+              onClick={() => {
+                foldersVisibility === true && setFoldersVisibility(false);  
+                setMenuVisibility(!menuVisibility);
                 }}
-                
-              > 
-                <img src={copylink} alt="copy link" />
-              </button>
-              <button
-                className={`download ${downloadMode}`}
-                type="button"
-                onClick={() => {
-                  setDownloadMode("file");
-                }}
-              >
-                <img src={download} alt="download" />
-              </button>
+              rotateonclick={true}
+            />
+            <SettingsColors
+              iconColor={iconColor}
+              onClick={(color) => setIconColor(color)}
+            />
+            <SettingsButton
+              boolState={foldersVisibility}
+              darkMode={darkMode}
+              icon={folderclosed}
+              icon2={folderopen}
+              onClick={() => {
+                menuVisibility === true && setMenuVisibility(false);
+                setFoldersVisibility(!foldersVisibility);
+              }}
+            />
             </div>
-            <div className={`category-tags ${tagsVisible}`}>
-              {tags.map((tag, index) => {
-                return (
-                  <div
-                    className={`tag ${
-                      tag.folder === activeTag ? "active" : "inactive"
-                    }`}
-                    onClick={() => setActiveTag(tag.folder)}
-                  >
-                    {tag.name}
-                  </div>
-                );
-              })}
-            </div>
+            <input value={searchQuery} class="icon-search" type="text" placeholder="Search" 
+        onChange={(e) => handleSearch(e)}/>
           </div>
+          <div
+          id="settings-menu"
+            className={`settings-menu darkmode-${darkMode} show-menu-${menuVisibility}`}
+          >
+            <SettingsToggle
+              iconURL1={lightmode}
+              iconURL2={darkmode}
+              boolState={darkMode}
+              darkMode={darkMode}
+              stateOneText="Off"
+              stateTwoText="On"
+              onClick={() => setDarkMode(!darkMode)}
+              label="Dark Mode"
+              tooltipText="For visual purposes only. The downloaded icon will be the same."
+            />
+            <SettingsRadio
+              options={["simple", "fancy", "both"]}
+              icons={[iconsimple, iconfancy, iconboth]}
+              activeOption={iconStyle}
+              onClick={(option) => setIconStyle(option)}
+              label="Icon Style"
+              darkMode={darkMode}
+            />
+            <SettingsToggle
+              iconURL1={sizelarge}
+              iconURL2={sizesmall}
+              boolState={iconSize}
+              darkMode={darkMode}
+              stateOneText="Large"
+              stateTwoText="SMall"
+              onClick={() => setIconSize(!iconSize)}
+              label="Icon Size"
+              tooltipText="For visual purposes only. The downloaded icon will be the same."
+            />
+            <SettingsToggle
+              iconURL1={link}
+              iconURL2={download}
+              boolState={downloadMode}
+              darkMode={darkMode}
+              onClick={() => setDownloadMode(!downloadMode)}
+              label="Dl Mode"
+              stateOneText="Copy Link"
+              stateTwoText="Save File"
+              tooltipText="Determines what happens when you click an icon"
+            />
 
-          <div className="icon-grid">
-            {activeTag === "all" || activeTag === "letters"
-              ? letters.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img folder={"letters"} src={icon.default} alt="icon" />
-                    </div>
-                  );
-                })
-              : null}
-            {/* create nao of numbers */}
-            {activeTag === "all" || activeTag === "numbers"
-              ? numbers.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img folder={"numbers"} src={icon.default} alt="icon" />
-                    </div>
-                  );
-                })
-              : null}
-            {/* create shapes icons */}
-            {activeTag === "all" || activeTag === "shapes"
-              ? shapes.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img folder={"shapes"} src={icon.default} alt="icon" />
-                    </div>
-                  );
-                })
-              : null}
-            {/* create date-events  icons */}
-            {activeTag === "all" || activeTag === "date-events"
-              ? dateEvents.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img
-                        folder={"date-events"}
-                        src={icon.default}
-                        alt="icon"
-                      />
-                    </div>
-                  );
-                })
-              : null}
-            {/* create days  icons */}
-            {activeTag === "all" || activeTag === "days"
-              ? days.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img folder={"days"} src={icon.default} alt="icon" />
-                    </div>
-                  );
-                })
-              : null}
-            {/* create weeks  icons */}
-            {activeTag === "all" || activeTag === "weeks"
-              ? weeks.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img folder={"weeks"} src={icon.default} alt="icon" />
-                    </div>
-                  );
-                })
-              : null}
-            {/* create months  icons */}
-            {activeTag === "all" || activeTag === "months"
-              ? months.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img folder={"months"} src={icon.default} alt="icon" />
-                    </div>
-                  );
-                })
-              : null}
-            {/* create years  icons */}
-            {activeTag === "all" || activeTag === "years"
-              ? years.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img folder={"years"} src={icon.default} alt="icon" />
-                    </div>
-                  );
-                })
-              : null}
-            {/* create biz-money  icons */}
-            {activeTag === "all" || activeTag === "biz-money"
-              ? bizMoney.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img folder={"biz-money"} src={icon.default} alt="icon" />
-                    </div>
-                  );
-                })
-              : null}
-            {/* create files-folders-data  icons */}
-            {activeTag === "all" || activeTag === "files-folders-data"
-              ? filesFoldersData.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img
-                        folder={"files-folders-data"}
-                        src={icon.default}
-                        alt="icon"
-                      />
-                    </div>
-                  );
-                })
-              : null}
-            {/* create time icons */}
-            {activeTag === "all" || activeTag === "time"
-              ? time.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img folder={"time"} src={icon.default} alt="icon" />
-                    </div>
-                  );
-                })
-              : null}
-            {/* create math-symbols icons */}
-            {activeTag === "all" || activeTag === "math-symbols"
-              ? mathSymbols.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img
-                        folder={"math-symbols"}
-                        src={icon.default}
-                        alt="icon"
-                      />
-                    </div>
-                  );
-                })
-              : null}
-            {/* create arrows icons */}
-            {activeTag === "all" || activeTag === "arrows"
-              ? arrows.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img folder={"arrows"} src={icon.default} alt="icon" />
-                    </div>
-                  );
-                })
-              : null}
-            {/* create media-reading-writing icons */}
-            {activeTag === "all" || activeTag === "media-reading-writing"
-              ? mediaReadingWriting.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img
-                        folder={"media-reading-writing"}
-                        src={icon.default}
-                        alt="icon"
-                      />
-                    </div>
-                  );
-                })
-              : null}
-
-            {/* create internet-communication icons */}
-            {activeTag === "all" || activeTag === "internet-communication"
-              ? internetCommunication.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img
-                        folder={"internet-communication"}
-                        src={icon.default}
-                        alt="icon"
-                      />
-                    </div>
-                  );
-                })
-              : null}
-            {/* create tasks-office icons */}
-            {activeTag === "all" || activeTag === "tasks-office"
-              ? tasksOffice.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img
-                        folder={"tasks-office"}
-                        src={icon.default}
-                        alt="icon"
-                      />
-                    </div>
-                  );
-                })
-              : null}
-            {/* create misc icons */}
-            {activeTag === "all" || activeTag === "misc"
-              ? misc.map((icon) => {
-                  return (
-                    <div
-                      className={`icon-wrapper ${iconColors} active`}
-                      onClick={(e) => handleIconClick(icon.default, e)}
-                    >
-                      <img folder={"misc"} src={icon.default} alt="icon" />
-                    </div>
-                  );
-                })
-              : null}
+            <SettingsToggle
+              iconURL1={labelhide}
+              iconURL2={labelshow}
+              boolState={iconLabel}
+              darkMode={darkMode}
+              stateOneText="Hide"
+              stateTwoText="Show"
+              onClick={() => setIconLabel(!iconLabel)}
+              label="Labels"
+              tooltipText="Shows or hides icon labels under the icons."
+            />
+            <SettingsButton
+              boolState={infoVisibility}
+              darkMode={darkMode}
+              icon={info}
+              onClick={() => notificationPopup("This is a work in progress. I'm working on it!")}
+            />
           </div>
+          
+            <IconFolders
+              activeIconFolder={iconFolder}
+              onClick={(folder) => setIconFolder(folder)}
+              iconColor={iconColor}
+              foldersVisibility={foldersVisibility}
+              darkMode={darkMode}
+            />
+          
+        </div>
+        <div className="icon-grid-body">
+          <IconGrid
+            iconColor={iconColor}
+            iconFolder={iconFolder}
+            iconStyle={iconStyle}
+            iconSize={iconSize}
+            iconLabel={iconLabel}
+            searchQuery={searchQuery}
+            handleIconClick={(url) => handleIconClick(url)}
+          />
         </div>
       </div>
     </>

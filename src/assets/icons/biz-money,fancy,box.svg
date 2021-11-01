@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+  <rect width="38" height="38" x="5" y="5" fill="#000" opacity=".2" rx="4"/>
+  <path fill="#000" d="M24 5H7.472a4 4 0 00-3.578 2.211l-3.17 6.342A1 1 0 001.618 15h14.91a4 4 0 003.578-2.211L24 5z" opacity=".6"/>
+  <path fill="#000" fill-rule="evenodd" d="M7.47 5H24h-11C9.23 5 7.343 5 6.171 6.172 4.999 7.343 4.999 9.229 4.999 13v2H1.617a1 1 0 01-.895-1.447l3.17-6.342A4 4 0 017.472 5z" clip-rule="evenodd" opacity=".2"/>
+  <path fill="#000" d="M24 5h16.528a4 4 0 013.578 2.211l3.17 6.342A1 1 0 0146.382 15h-14.91a4 4 0 01-3.578-2.211L24 5z"/>
+  <path fill="#000" d="M24 5h16.528a4 4 0 013.578 2.211l3.17 6.342A1 1 0 0146.382 15h-14.91a4 4 0 01-3.578-2.211L24 5z"/>
+  <mask id="a" width="38" height="38" x="5" y="5" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+    <rect width="38" height="38" x="5" y="5" fill="#66AADA" rx="4"/>
+  </mask>
+  <g mask="url(#a)">
+    <path fill="#000" d="M43 5H24v38h11c3.771 0 5.657 0 6.828-1.172C43 40.657 43 38.771 43 35V5z" opacity=".6"/>
+    <path fill="#000" fill-rule="evenodd" d="M5 5.855A3.999 3.999 0 017.472 5H5v.855zM5 15v20c0 3.771 0 5.657 1.172 6.828C7.343 43 9.229 43 13 43h11V5l-3.894 7.789A4 4 0 0116.528 15H5z" clip-rule="evenodd"/>
+  </g>
+</svg>

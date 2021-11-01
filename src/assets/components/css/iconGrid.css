@@ -1,0 +1,69 @@
+
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+    grid-gap: 24px;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.icon-container {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    position: relative;
+
+}
+
+.icon-container:hover {
+    background-color:  rgba(159, 164, 169, .1);
+    cursor: pointer;
+}
+
+.style-false {
+    display: none;
+}
+
+.folder-false {
+    display: none;
+}
+
+.size-false {
+    width: 48px;
+    height: 48px;
+    transition: .3s;
+}
+
+.size-true {
+    width: 20px;
+    height: 20px;
+    transition: .3s;
+}
+
+.label-true {
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .3s;
+    height: 22px;
+    top: 54px
+    
+}
+.label-false {
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .3s;
+    height: 0px;
+    top: 72px;
+    overflow: hidden;
+
+}
