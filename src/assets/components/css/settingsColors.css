@@ -1,0 +1,59 @@
+
+@keyframes shadowpulse {
+  0% {
+    box-shadow: 0px 6px 12px -2px rgba(0, 0, 0, .8);
+  }
+  50% {
+    box-shadow: 0px 2px 12px -2px rgba(0, 0, 0, .6);
+  }
+  100% {
+    box-shadow: 0px 6px 12px -2px rgba(0, 0, 0, .8);
+  }
+}
+.color-option {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: black;
+    transition: .5s;
+}
+
+.color-option:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px -2px rgba(0, 0, 0, .8);
+}
+
+.active-color {
+    animation: shadowpulse 1s infinite;
+    box-shadow: 0px 6px 12px -2px rgba(0, 0, 0, .8);
+}
+
+.gray {
+    filter: invert(80%) sepia(13%) saturate(121%) hue-rotate(169deg) brightness(80%) contrast(88%);
+  }
+  .brown {
+    filter: invert(74%) sepia(15%) saturate(1289%) hue-rotate(331deg) brightness(89%) contrast(85%);
+  }
+  .orange {
+    filter: invert(78%) sepia(27%) saturate(4044%) hue-rotate(330deg) brightness(92%) contrast(99%);
+  }
+  .yellow {
+    filter: invert(64%) sepia(61%) saturate(413%) hue-rotate(1deg) brightness(89%) contrast(88%);
+  }
+  .green {
+    filter: invert(70%) sepia(19%) saturate(687%) hue-rotate(84deg) brightness(90%) contrast(87%);
+  }
+  .blue {
+    filter: invert(68%) sepia(25%) saturate(813%) hue-rotate(165deg) brightness(90%) contrast(89%);
+  }
+  .purple {
+    filter: invert(71%) sepia(18%) saturate(1074%) hue-rotate(214deg) brightness(91%) contrast(86%);
+  }
+  .pink {
+    filter: invert(74%) sepia(46%) saturate(710%) hue-rotate(276deg) brightness(92%) contrast(90%);
+  }
+  .red {
+      filter: invert(58%) sepia(33%) saturate(666%) hue-rotate(308deg) brightness(104%) contrast(84%);
+    }
+

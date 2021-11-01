@@ -1,7 +1,7 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect opacity="0.2" x="5" y="5" width="38" height="38" rx="4" fill="black"/>
-<path d="M5 13C5 9.22876 5 7.34315 6.17157 6.17157C7.34315 5 9.22876 5 13 5H35C38.7712 5 40.6569 5 41.8284 6.17157C43 7.34315 43 9.22876 43 13V15H5V13Z" fill="black"/>
-<rect opacity="0.6" x="9" y="27" width="30" height="4" rx="1" fill="black"/>
-<rect x="9" y="35" width="30" height="4" rx="1" fill="black"/>
-<rect opacity="0.2" x="9" y="19" width="30" height="4" rx="1" fill="black"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+  <rect width="38" height="38" x="5" y="5" fill="#000" opacity=".2" rx="4"/>
+  <path fill="#000" d="M5 13c0-3.771 0-5.657 1.172-6.828C7.343 5 9.229 5 13 5h22c3.771 0 5.657 0 6.828 1.172C43 7.343 43 9.229 43 13v2H5v-2z"/>
+  <rect width="30" height="4" x="9" y="27" fill="#000" opacity=".6" rx="1"/>
+  <rect width="30" height="4" x="9" y="35" fill="#000" rx="1"/>
+  <rect width="30" height="4" x="9" y="19" fill="#000" opacity=".2" rx="1"/>
 </svg>

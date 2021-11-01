@@ -1,22 +1,22 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect opacity="0.2" x="5" y="5" width="38" height="38" rx="4" fill="black"/>
-<rect x="38" y="10" width="4" height="28" rx="1" transform="rotate(90 38 10)" fill="black"/>
-<g opacity="0.6">
-<rect x="30" y="18" width="4" height="4" rx="1" transform="rotate(90 30 18)" fill="black"/>
-<rect x="22" y="18" width="4" height="4" rx="1" transform="rotate(90 22 18)" fill="black"/>
-<rect x="14" y="18" width="4" height="4" rx="1" transform="rotate(90 14 18)" fill="black"/>
-<rect x="38" y="18" width="4" height="4" rx="1" transform="rotate(90 38 18)" fill="black"/>
-</g>
-<g opacity="0.6">
-<rect x="30" y="26" width="4" height="4" rx="1" transform="rotate(90 30 26)" fill="black"/>
-<rect x="22" y="26" width="4" height="4" rx="1" transform="rotate(90 22 26)" fill="black"/>
-<rect x="14" y="26" width="4" height="4" rx="1" transform="rotate(90 14 26)" fill="black"/>
-<rect x="38" y="26" width="4" height="4" rx="1" transform="rotate(90 38 26)" fill="black"/>
-</g>
-<g opacity="0.6">
-<rect x="30" y="34" width="4" height="4" rx="1" transform="rotate(90 30 34)" fill="black"/>
-<rect x="38" y="34" width="4" height="4" rx="1" transform="rotate(90 38 34)" fill="black"/>
-<rect x="22" y="34" width="4" height="4" rx="1" transform="rotate(90 22 34)" fill="black"/>
-<rect x="14" y="34" width="4" height="4" rx="1" transform="rotate(90 14 34)" fill="black"/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+  <rect width="38" height="38" x="5" y="5" fill="#000" opacity=".2" rx="4"/>
+  <rect width="4" height="28" x="38" y="10" fill="#000" rx="1" transform="rotate(90 38 10)"/>
+  <g opacity=".6">
+    <rect width="4" height="4" x="30" y="18" fill="#000" rx="1" transform="rotate(90 30 18)"/>
+    <rect width="4" height="4" x="22" y="18" fill="#000" rx="1" transform="rotate(90 22 18)"/>
+    <rect width="4" height="4" x="14" y="18" fill="#000" rx="1" transform="rotate(90 14 18)"/>
+    <rect width="4" height="4" x="38" y="18" fill="#000" rx="1" transform="rotate(90 38 18)"/>
+  </g>
+  <g opacity=".6">
+    <rect width="4" height="4" x="30" y="26" fill="#000" rx="1" transform="rotate(90 30 26)"/>
+    <rect width="4" height="4" x="22" y="26" fill="#000" rx="1" transform="rotate(90 22 26)"/>
+    <rect width="4" height="4" x="14" y="26" fill="#000" rx="1" transform="rotate(90 14 26)"/>
+    <rect width="4" height="4" x="38" y="26" fill="#000" rx="1" transform="rotate(90 38 26)"/>
+  </g>
+  <g opacity=".6">
+    <rect width="4" height="4" x="30" y="34" fill="#000" rx="1" transform="rotate(90 30 34)"/>
+    <rect width="4" height="4" x="38" y="34" fill="#000" rx="1" transform="rotate(90 38 34)"/>
+    <rect width="4" height="4" x="22" y="34" fill="#000" rx="1" transform="rotate(90 22 34)"/>
+    <rect width="4" height="4" x="14" y="34" fill="#000" rx="1" transform="rotate(90 14 34)"/>
+  </g>
 </svg>

@@ -28,6 +28,18 @@
   }
 }
 
+@keyframes shadowBurst {
+    0% {
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1) inset, -8px 0px 8px -12px rgba(46, 170, 220, 0.0);
+    }
+    50% {
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1) inset, 0px 0px 30px -10px rgba(46, 170, 220, 1);
+    }
+    100% {
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1) inset, 8px 0px 8px -12px rgba(46, 170, 220, 0.0);
+    }
+}
+
 .toggle-container {
     display: flex;
     flex-direction: column;
@@ -97,7 +109,6 @@
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1) inset;
 }
-
 .settings-toggle:hover {
     cursor: pointer;
 }
@@ -109,12 +120,18 @@
     justify-content: center;
     width: 32px;
     height: 32px;
-    border-radius: 8px;
+    border-radius: 6px;
     position: absolute;
     margin: 0px 4px;
     transition: .3s;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.02);
+    
 }
+
+
+
 
 .settings-toggle-icon.state-true {
     animation: toggleTrue .3s ease-in-out forwards;
@@ -124,30 +141,50 @@
     animation: toggleFalse .3s ease-in-out forwards;
 }
 
-.icon-one.state-true {
-    opacity: 0%;
-}
-
-.icon-two.state-true {
-    opacity: 100%;
-}
-
-.icon-one.state-false {
-    opacity: 100%;
-}
-
-.icon-two.state-false {
-    opacity: 0%;
-}
-
-.darkmode-true {
-    background-color: #2F3437;
-}
-
-.darkmode-false {
-    background-color: white;
-}
 .settings-toggle-icon img {
     width: 28px;
     height: 28px;
+    z-index: 3;
+}
+
+.ghost-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 6px;
+    width: 100%;
+    z-index: 3;
+}
+
+
+
+
+
+.active-false-icon1 {
+    width: 28px;
+    height: 28px;
+    opacity: 1;
+    transition: .3s ease-in-out;
+}
+
+.active-false-icon2 {
+    width: 28px;
+    height: 28px;
+    opacity: .2;
+    transition: .3s ease-in-out;
+}
+
+.active-true-icon1 {
+    width: 28px;
+    height: 28px;
+    opacity: .2;
+    transition: .3s ease-in-out;
+}
+
+.active-true-icon2 {
+    width: 28px;
+    height: 28px;
+    opacity: 1;
+    transition: .3s ease-in-out;
 }

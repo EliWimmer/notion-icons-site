@@ -1,6 +1,6 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect opacity="0.2" x="5" y="5" width="38" height="38" rx="4" fill="black"/>
-<circle cx="24" cy="24" r="4" transform="rotate(90 24 24)" fill="black"/>
-<circle cx="24" cy="35" r="4" transform="rotate(90 24 35)" fill="black"/>
-<circle cx="24" cy="13" r="4" transform="rotate(90 24 13)" fill="black"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+  <rect width="38" height="38" x="5" y="5" fill="#000" opacity=".2" rx="4"/>
+  <circle cx="24" cy="24" r="4" fill="#000" transform="rotate(90 24 24)"/>
+  <circle cx="24" cy="35" r="4" fill="#000" transform="rotate(90 24 35)"/>
+  <circle cx="24" cy="13" r="4" fill="#000" transform="rotate(90 24 13)"/>
 </svg>
