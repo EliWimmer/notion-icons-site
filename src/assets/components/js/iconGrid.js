@@ -1,5 +1,7 @@
 import '../css/iconGrid.css'
 import { React, useState, useEffect } from 'react'
+import favorite from '../../uiIcons/favorite.svg'
+import unfavorite from '../../uiIcons/unfavorite.svg'
 
 export default function IconGrid(props) {
 
@@ -7,6 +9,9 @@ export default function IconGrid(props) {
 const icons = require.context('../../icons', true, /\.svg$/);
 
 const allIcons = icons.keys().map(icons);
+
+// create an array of indexes in local storage to use for favorite icons
+const favoriteIcons = JSON.parse(localStorage.getItem('favoriteIcons')) || [];
 
 const parsedIcons = allIcons.map(icon => {
     const iconName = icon.default.split(".")[0].split(",")[2]
@@ -38,7 +43,7 @@ useEffect(() => {
         <>
         
         <div className="icon-grid">
-            {activeIcons.map(icon => {
+            {activeIcons.map((icon, index) => {
                 return (
                     <div 
                     className={`icon-container folder-${props.iconFolder === icon.iconFolder || props.iconFolder === "all"} style-${props.iconStyle === icon.iconStyle || props.iconStyle === "both"}`} 
@@ -49,6 +54,7 @@ useEffect(() => {
                         style: icon.iconStyle
                     })}
                     >
+                        {/* if icon is in favoriteIcons show img favorite, if not show image unfavorite     */}
                         <img class={`size-${props.iconSize} ${props.iconColor}`} src={icon.path} alt={icon.iconName}/>
                         <div class={`label-${props.iconLabel}`}>{icon.iconName}</div>
                         </div>

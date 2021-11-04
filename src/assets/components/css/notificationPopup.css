@@ -1,0 +1,35 @@
+
+#notification {
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    pointer-events: none;
+    height: 64px;
+    padding: 0px 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 11;
+    width: 100%;
+    background: rgba(0, 0, 0, .1);
+    box-shadow: none;
+  }
+  
+  .notification-show-false {
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-100%);
+    backdrop-filter: blur(0px);
+  }
+  
+  .notification-show-true {
+    pointer-events: none;
+    opacity: 1;
+    transform: translateY(0%);
+    backdrop-filter: blur(20px);
+  }

@@ -40,8 +40,11 @@ export default function SettingsToggle(props) {
       <div className="toggle-label">
             {props.label}
         </div>
-        <div className="state-text">
-            {props.boolState ? props.stateTwoText : props.stateOneText}
+        <div className={`state-text one-${props.boolState}`}>
+            {props.stateOneText}
+        </div>
+        <div className={`state-text two-${props.boolState}`}>
+            {props.stateTwoText}
         </div>
         <div ref={toolTip} className={`tooltip darkmode-${props.darkMode}`}>
             {props.tooltipText}

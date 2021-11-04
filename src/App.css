@@ -2,6 +2,12 @@
 
 html, #root, body {
   height: 100vh;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 .App {
@@ -13,6 +19,21 @@ html, #root, body {
   transition: .3s;
   font-family: 'Inter', sans-serif;
   overflow: scroll;
+  overflow-x: hidden;
+}
+
+.App::-webkit-scrollbar {
+  background-color: rgba(159, 164, 169, .0);
+  width: 16px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(159, 164, 169, .05);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(159, 164, 169, .1);
+  border-radius: 10px;
 }
 
 .darkmode-true {
@@ -49,37 +70,7 @@ h1 {
   margin: 0px;
 }
 
-#notification {
-  position: fixed;
-  top: 16px;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: .3s;
-  pointer-events: none;
-  height: 32px;
-  padding: 0px 8px;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 4px;
-  filter: brightness(.95);
-  z-index: 11;
-}
 
-.notification-show-false {
-  pointer-events: none;
-  opacity: 0;
-  transform: translateY(-100%);
-}
-
-.notification-show-true {
-  pointer-events: all;
-  opacity: 1;
-  transform: translateY(0%);
-}
 
 .header-left {
   margin-left: 16px;
@@ -126,13 +117,17 @@ h1 {
   transform: translateY(-2px);
 }
 .logo {
-  margin: 64px 0px;
+  margin: 48px 0px;
 
 }
 
 .logo img {
   width: 400px;
   height: auto;
+}
+
+.logo h3 {
+  color: black;
 }
 .gray {
   filter: invert(80%) sepia(13%) saturate(121%) hue-rotate(169deg) brightness(80%) contrast(88%);
@@ -169,23 +164,38 @@ h1 {
   align-items: center;
   justify-content: center;
   position: sticky;
-  top: 64px;
+  top: 66px;
   z-index: 10;
   border-radius: 4px;
   transition: .3s;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
   width: 704px;
+  backdrop-filter: blur(10px);
+}
+
+
+.settings-bar.darkmode-true {
+  background-color: #3f4447cc;
+  color: #EBEBEB;
+  border: 1px solid #565a5cb0;
+
+}
+
+.settings-bar.darkmode-false {
+  background-color: rgba(255, 255, 255, 0.548);
+  color: #37352F;
+  border: 1px solid #e8e8e7d5;
 }
 
 .icon-search {
   height: 40px;
   margin: 16px 0px 0px 0px;
-  background-color: rgba(159, 164, 169, .1);
-  border: none;
+  /* background-color: rgba(159, 164, 169, ); */
+  border: 1px solid rgba(0, 0, 0, 0.10);
   border-radius: 6px;
-  padding: 0px 16px;
+  padding: 0px 0px;
   order: 2;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,6 +205,9 @@ h1 {
   font-weight: 700;
   color:rgba(159, 164, 169, 1);
   text-align: center;
+  transition: .3s;
+  width: 100%;
+  backdrop-filter: blur(20px);
 }
 
 .icon-search::placeholder {
@@ -204,26 +217,16 @@ h1 {
 
 .icon-search:focus {
   outline: 1px solid #2EAADC;
-}
-.settings-bar.darkmode-true {
-  background-color: #3F4447;
-  color: #EBEBEB;
-  border: 1px solid #565A5C;
-
-}
-
-.settings-bar.darkmode-false {
-  background-color: white;
-  color: #37352F;
-  border: 1px solid #E8E8E7;
+  box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.10);
+  width: 110%;
 }
 
 .main-menu {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   padding: 16px;
   width: 100%;
   height: fit-content;
@@ -233,15 +236,27 @@ h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   height: fit-content;
+}
+
+.menu-row-two {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: fit-content;
+  padding-top: 16px;
+  border-top: rgba(159, 164, 169, .1) 1px solid;
+  margin-top: 16px;
 }
 
 .settings-menu {
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   column-gap: 16px;
@@ -257,25 +272,25 @@ h1 {
 }
 
 .settings-menu.show-menu-true {
-  height: 111px;
+  height: 176px;
   padding: 16px 16px 16px 16px;
 }
 
 .settings-menu.show-menu-true.darkmode-true {
-  box-shadow: 0px -1px 0px 0px #565A5C;
+  box-shadow: 0px -1px 0px 0px #565a5c52;
 }
 
 .settings-menu.show-menu-true.darkmode-false {
-  box-shadow: 0px -1px 0px 0px #E8E8E7;
+  box-shadow: 0px -1px 0px 0px #e8e8e7af;
 }
 
 .settings-menu.darkmode-true {
-  background-color: #494E50;
+  background-color: #494e503b;
   color: #EBEBEB;
 }
 
 .settings-menu.darkmode-false {
-  background-color: #FAFAFA;
+  background-color: #fafafa1e;
   color: #37352F;
 }
 

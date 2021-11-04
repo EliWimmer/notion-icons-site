@@ -1,0 +1,30 @@
+.little-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: rgba(159, 164, 169, .1);
+    padding: 0 8px;
+    border-radius: 4px;
+    flex-grow: 1;
+    margin: 0 8px;
+    color:rgba(159, 164, 169, 1);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.little-button:hover {
+    opacity: .8;
+    transform: translateY(-2px);
+}
+
+.little-button img {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    padding-top: 1px;
+}

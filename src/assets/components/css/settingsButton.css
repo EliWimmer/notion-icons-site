@@ -34,11 +34,11 @@
 }
 
 .bool-true-rotate-true {
-    animation: rotate180 2s linear infinite;
+    animation: rotate180 1s ease-in-out;
 }
 
 .bool-false-rotate-true {
-    animation: rotate180backwards 1s ease-out;
+    animation: rotate180backwards 1s ease-in-out;
 }
 
 .settings-button.darkmode-true {

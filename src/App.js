@@ -4,6 +4,9 @@ import SettingsButton from "./assets/components/js/settingsButton";
 import SettingsColors from "./assets/components/js/settingsColors";
 import IconFolders from "./assets/components/js/iconFolders";
 import IconGrid from "./assets/components/js/iconGrid";
+import HeaderButtons from "./assets/components/js/HeaderButtons";
+import SettingsExtras from "./assets/components/js/SettingsExtras";
+import NotificationPopup from "./assets/components/js/NotificationPopup";
 
 import link from "./assets/uiIcons/link.svg";
 import download from "./assets/uiIcons/download.svg";
@@ -21,46 +24,89 @@ import sizesmall from "./assets/uiIcons/sizesmall.svg";
 import sizelarge from "./assets/uiIcons/sizelarge.svg";
 import folderopen from "./assets/uiIcons/folderopen.svg";
 import folderclosed from "./assets/uiIcons/folderclosed.svg";
-import coffee from "./assets/uiIcons/coffee.svg";
-import twitter from "./assets/uiIcons/twitter.svg";
 import person from "./assets/uiIcons/person.svg";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 
 function App() {
-  // STATES
+  
+ // LAYOUT STATES
+  const [iconFolder, setIconFolder] = useState("all");
   const [infoVisibility, setInfoVisibility] = useState(false);
   const [menuVisibility, setMenuVisibility] = useState(false);
   const [foldersVisibility, setFoldersVisibility] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [notification, setNotification] = useState("");
+  const [notificationVisibility, setNotificationVisibility] = useState(false);
+    
+  // SETTINGS STATES
   const [darkMode, setDarkMode] = useState(false);
-  const [downloadMode, setDownloadMode] = useState(false);
+  const [iconSize, setIconSize] = useState(false);
   const [iconStyle, setIconStyle] = useState("simple");
   const [iconLabel, setIconLabel] = useState(false);
   const [iconColor, setIconColor] = useState("gray");
-  const [iconFolder, setIconFolder] = useState("all");
-  const [iconSize, setIconSize] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [notification, setNotification] = useState(false);
+  const [downloadMode, setDownloadMode] = useState(false);
 
-  // DATA SETS
-  
+    // load settings states from local storage if available
+    useEffect(() => {
+      if (localStorage.getItem("darkMode")) {
+        setDarkMode(JSON.parse(localStorage.getItem("darkMode")));
+      }
+      if (localStorage.getItem("iconSize")) {
+        setIconSize(JSON.parse(localStorage.getItem("iconSize")));
+      }
+      if (localStorage.getItem("iconStyle")) {
+        setIconStyle(JSON.parse(localStorage.getItem("iconStyle")));
+      }
+      if (localStorage.getItem("iconLabel")) {
+        setIconLabel(JSON.parse(localStorage.getItem("iconLabel")));
+      }
+      if (localStorage.getItem("iconColor")) {
+        setIconColor(JSON.parse(localStorage.getItem("iconColor")));
+      }
+      if (localStorage.getItem("downloadMode")) {
+        setDownloadMode(JSON.parse(localStorage.getItem("downloadMode")));
+      }
+    }, []);
+
+  // make settings states persistent
+  useEffect(() => {
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
+    localStorage.setItem("iconSize", JSON.stringify(iconSize));
+    localStorage.setItem("iconStyle", JSON.stringify(iconStyle));
+    localStorage.setItem("iconLabel", JSON.stringify(iconLabel));
+    localStorage.setItem("iconColor", JSON.stringify(iconColor));
+    localStorage.setItem("downloadMode", JSON.stringify(downloadMode));
+  }, [darkMode, iconSize, iconStyle, iconLabel, iconColor, downloadMode]);
+
+  useEffect(() => {
+    if (notification !== "") {
+      setNotificationVisibility(true);
+      setTimeout(() => {
+        setNotificationVisibility(false);
+      }, 3000);
+    }
+  }, [notification]);
+
+
+useEffect(() => {
+  if (!notificationVisibility) {
+    setTimeout(() => {
+      setNotification("");
+    }, 100);
+  }
+}, [notificationVisibility]);
+
+
+
   // FUNCTIONS
-
   function handleSearch(e) {
     e.preventDefault();
     setSearchQuery(e.target.value);
   }
 
-  function notificationPopup(message) {
-    const notification = document.getElementById("notification");
-    notification.innerHTML = message;
-    setNotification(true);
-    setTimeout(() => {
-      setNotification(false);
-    }, 3000);
-  }
 
 
   function handleIconClick(url) {
@@ -69,10 +115,12 @@ function App() {
     // if download mode is false copy iconUrl to clipboard, else download icon
     if (downloadMode) {
       downloadFile(iconUrl, url.name, url.style, url.folder, iconColor);
-      notificationPopup("Downloading...")
+      setNotification(`Downloading...}`);
+
     } else {
       copyToClipboard(iconUrl);
-      notificationPopup("Copied to clipboard")
+      setNotification(`Copied URL to Clipboard`);
+
     }
 
     function downloadFile(url, name, style, folder, color) {
@@ -105,7 +153,7 @@ function App() {
     <>
       <div className={`App darkmode-${darkMode}`}>
         <div className={`App-header darkmode-${darkMode}`}>
-          <a href="https://www.eliwimmer.com" target="_blank">
+          <a href="https://www.eliwimmer.com" target="_blank" rel="noreferrer">
             
           <h2 className="header-left">
           <img src={person} alt="person" />
@@ -113,17 +161,20 @@ function App() {
           </h2>
           </a>
           <div className="header-right">
-            <a href="https://www.buymeacoffee.com/eliwimmer" target="_blank" rel="noopener noreferrer">
-              <img src={coffee} alt="Buy me a coffee" />
-            </a>
-            <a href="https://twitter.com/eliwimm" target="_blank" rel="noopener noreferrer">
-              <img src={twitter} alt="Twitter" />
-            </a>
+
+         <HeaderButtons />
+            
           </div>
         </div>
-        <div id="notification" className={`notification-show-${notification} darkmode-${darkMode}`}></div>
+        <NotificationPopup
+          message={notification}
+          darkMode={darkMode}
+          bool={notificationVisibility}
+        />
         <div className={`logo ${iconColor}`}>
+          
           <img src={logo} alt="logo" />
+          <h3>Handcrafted icons, just for Notion.</h3>
         </div>
         <div id="settings-bar" className={`settings-bar darkmode-${darkMode}`}>
           <div id="main-menu" className="main-menu">
@@ -154,13 +205,14 @@ function App() {
               }}
             />
             </div>
-            <input value={searchQuery} class="icon-search" type="text" placeholder="Search" 
+            <input value={searchQuery} class={`icon-search darkmode-${darkMode}`} type="text" placeholder="Search" 
         onChange={(e) => handleSearch(e)}/>
           </div>
           <div
           id="settings-menu"
             className={`settings-menu darkmode-${darkMode} show-menu-${menuVisibility}`}
           >
+            <div className="menu-row-one">
             <SettingsToggle
               iconURL1={lightmode}
               iconURL2={darkmode}
@@ -168,7 +220,10 @@ function App() {
               darkMode={darkMode}
               stateOneText="Off"
               stateTwoText="On"
-              onClick={() => setDarkMode(!darkMode)}
+              onClick={() => {
+                setDarkMode(darkMode === null ? true : !darkMode);
+                localStorage.setItem("darkMode", darkMode);
+              }}
               label="Dark Mode"
               tooltipText="For visual purposes only. The downloaded icon will be the same."
             />
@@ -214,12 +269,15 @@ function App() {
               label="Labels"
               tooltipText="Shows or hides icon labels under the icons."
             />
-            <SettingsButton
-              boolState={infoVisibility}
-              darkMode={darkMode}
-              icon={info}
-              onClick={() => notificationPopup("This is a work in progress. I'm working on it!")}
-            />
+            </div>
+            <div className="menu-row-two">
+              <SettingsExtras onClick={
+                (message) => {
+                  setNotification(message);
+                }
+
+              } />
+            </div>
           </div>
           
             <IconFolders

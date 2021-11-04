@@ -1,0 +1,35 @@
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 12px;
+    height: 32px;
+    padding: 8px 8px;
+    transition: .3s;
+}
+
+.header-buttons a {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    background: rgba(0,0,0,.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    height: 32px;
+    padding: 0px 8px;
+}
+
+.header-buttons img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.header-buttons a:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    opacity: 0.8;
+  }
