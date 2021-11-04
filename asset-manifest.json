@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.e3cb31e6.chunk.css",
-    "main.js": "/static/js/main.4244b8f7.chunk.js",
-    "main.js.map": "/static/js/main.4244b8f7.chunk.js.map",
+    "main.css": "/static/css/main.7dc2d733.chunk.css",
+    "main.js": "/static/js/main.dac38502.chunk.js",
+    "main.js.map": "/static/js/main.dac38502.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e694a8bb.js",
     "runtime-main.js.map": "/static/js/runtime-main.e694a8bb.js.map",
     "static/js/2.fa7807ba.chunk.js": "/static/js/2.fa7807ba.chunk.js",
     "static/js/2.fa7807ba.chunk.js.map": "/static/js/2.fa7807ba.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.e3cb31e6.chunk.css.map": "/static/css/main.e3cb31e6.chunk.css.map",
+    "static/css/main.7dc2d733.chunk.css.map": "/static/css/main.7dc2d733.chunk.css.map",
     "static/js/2.fa7807ba.chunk.js.LICENSE.txt": "/static/js/2.fa7807ba.chunk.js.LICENSE.txt",
     "static/media/arrows,fancy,down-left.svg": "/static/media/arrows,fancy,down-left.4f90e68c.svg",
     "static/media/arrows,fancy,down-right.svg": "/static/media/arrows,fancy,down-right.0f3d3d03.svg",
@@ -88,7 +88,7 @@
     "static/media/calendar-events,simple,view-month.svg": "/static/media/calendar-events,simple,view-month.81d7a7c0.svg",
     "static/media/calendar-events,simple,view-week.svg": "/static/media/calendar-events,simple,view-week.43dcb93e.svg",
     "static/media/calendar-events,simple,view-year.svg": "/static/media/calendar-events,simple,view-year.679e6539.svg",
-    "static/media/coffee.151e12d9.svg": "/static/media/coffee.151e12d9.svg",
+    "static/media/coffee.f3b4e3cd.svg": "/static/media/coffee.f3b4e3cd.svg",
     "static/media/darkmode.db92933c.svg": "/static/media/darkmode.db92933c.svg",
     "static/media/days,fancy,friday.svg": "/static/media/days,fancy,friday.45910c01.svg",
     "static/media/days,fancy,monday.svg": "/static/media/days,fancy,monday.e4239a3c.svg",
@@ -105,6 +105,7 @@
     "static/media/days,simple,tuesday.svg": "/static/media/days,simple,tuesday.dc725bf7.svg",
     "static/media/days,simple,wednesday.svg": "/static/media/days,simple,wednesday.838f7440.svg",
     "static/media/download.a75b9b1b.svg": "/static/media/download.a75b9b1b.svg",
+    "static/media/favorite.3ef49c4f.svg": "/static/media/favorite.3ef49c4f.svg",
     "static/media/files-folders-data,fancy,chart-graph.svg": "/static/media/files-folders-data,fancy,chart-graph.bd4e6fd7.svg",
     "static/media/files-folders-data,fancy,database.svg": "/static/media/files-folders-data,fancy,database.114618c9.svg",
     "static/media/files-folders-data,fancy,document.svg": "/static/media/files-folders-data,fancy,document.a51a9b98.svg",
@@ -127,8 +128,8 @@
     "static/media/food-frink,fancy,coffee.svg": "/static/media/food-frink,fancy,coffee.2032e24d.svg",
     "static/media/food-frink,simple,burger.svg": "/static/media/food-frink,simple,burger.1a3ce2c6.svg",
     "static/media/food-frink,simple,coffee.svg": "/static/media/food-frink,simple,coffee.f0c591e2.svg",
-    "static/media/github.ec835bfc.svg": "/static/media/github.ec835bfc.svg",
-    "static/media/gumroad.1704783a.svg": "/static/media/gumroad.1704783a.svg",
+    "static/media/github.cd93731e.svg": "/static/media/github.cd93731e.svg",
+    "static/media/gumroad.d409addc.svg": "/static/media/gumroad.d409addc.svg",
     "static/media/iconboth.f0e9264e.svg": "/static/media/iconboth.f0e9264e.svg",
     "static/media/iconfancy.d8555fb8.svg": "/static/media/iconfancy.d8555fb8.svg",
     "static/media/iconsimple.1be539e9.svg": "/static/media/iconsimple.1be539e9.svg",
@@ -447,7 +448,8 @@
     "static/media/time,simple,sun-day-time.svg": "/static/media/time,simple,sun-day-time.c22ee736.svg",
     "static/media/time,simple,sunrise-time.svg": "/static/media/time,simple,sunrise-time.d1b078df.svg",
     "static/media/time,simple,sunset-time.svg": "/static/media/time,simple,sunset-time.ccbb35e5.svg",
-    "static/media/twitter.77982e4c.svg": "/static/media/twitter.77982e4c.svg",
+    "static/media/twitter.c78efcf5.svg": "/static/media/twitter.c78efcf5.svg",
+    "static/media/unfavorite.c7f69afb.svg": "/static/media/unfavorite.c7f69afb.svg",
     "static/media/weeks,fancy,01.svg": "/static/media/weeks,fancy,01.34bc9c98.svg",
     "static/media/weeks,fancy,02.svg": "/static/media/weeks,fancy,02.43127a8c.svg",
     "static/media/weeks,fancy,03.svg": "/static/media/weeks,fancy,03.9ecbdb0d.svg",
@@ -604,7 +606,7 @@
   "entrypoints": [
     "static/js/runtime-main.e694a8bb.js",
     "static/js/2.fa7807ba.chunk.js",
-    "static/css/main.e3cb31e6.chunk.css",
-    "static/js/main.4244b8f7.chunk.js"
+    "static/css/main.7dc2d733.chunk.css",
+    "static/js/main.dac38502.chunk.js"
   ]
 }
