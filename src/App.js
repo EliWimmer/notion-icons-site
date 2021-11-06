@@ -115,7 +115,7 @@ useEffect(() => {
     // if download mode is false copy iconUrl to clipboard, else download icon
     if (downloadMode) {
       downloadFile(iconUrl, url.name, url.style, url.folder, iconColor);
-      setNotification(`Downloading...}`);
+      setNotification(`Downloading...`);
 
     } else {
       copyToClipboard(iconUrl);
