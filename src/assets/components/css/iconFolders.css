@@ -17,11 +17,12 @@
     position: relative;
     overflow: hidden;
     transition: .3s;
+    width: 830px;
 }
 
 .icon-folders.show-menu-true {
     height: 111px;
-    padding: 16px 16px 16px 16px;
+    padding: 0px 16px 32px 16px;
   }
 
 .icon-folder-tags {
@@ -35,15 +36,15 @@
 
 .icon-folder-tags:hover {
     opacity: .8;
-    outline: 1px solid #2eabdc;
+    transform: translateY(-2px);
     cursor: pointer;
 }
 
 .folder-active-true {
-    outline: 1px solid #2EAADC;
+    /* outline: 1px solid #2EAADC; */
     color: #4fbce7;
     transform: translateY(-2px);
-    box-shadow: 0px 2px 8px 0px rgba(16, 84, 112, .3);
+    box-shadow: 0px 2px 10px -1px #2eabdcb2, 0px -1px 0px 0px #2eabdc inset;
 }
 
 .icon-folders.show-menu-true.darkmode-true {

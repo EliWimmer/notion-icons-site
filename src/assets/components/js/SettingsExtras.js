@@ -14,7 +14,7 @@ export default function SettingsExtras(props) {
                 }}
             >
                 <img src={info} alt="info" />
-                <p>More Info</p>
+                <p>Info</p>
             </div>
             <div 
                 className="little-button"
@@ -33,7 +33,7 @@ export default function SettingsExtras(props) {
             
             >
                 <img src={notion} alt="notion" />
-                <p>Login with Notion</p>
+                <p>Login</p>
             </div>
         </>
     )

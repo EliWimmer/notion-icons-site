@@ -81,6 +81,10 @@ export default function IconFolders(props) {
       iconFolderTag: "internet-communication",
     },
     {
+      name: "Nature & Elements",
+      iconFolderTag: "nature-elements",
+    },
+    {
       name: "Letters",
       iconFolderTag: "letters",
     },
@@ -111,7 +115,7 @@ export default function IconFolders(props) {
   ];
 
   return (
-    <div className={`icon-folders show-menu-${props.foldersVisibility} darkmode-${props.darkMode}`}>
+    <div className={`icon-folders show-menu-${props.foldersVisibility}`}>
       {folders.map((folder, index) => {
         return (
           <div

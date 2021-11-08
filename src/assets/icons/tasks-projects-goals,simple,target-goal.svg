@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
-  <rect width="38" height="38" x="5" y="5" fill="#000" opacity=".2" rx="4"/>
-  <path stroke="#000" stroke-linecap="round" stroke-width="4" d="M24 24l14-14" opacity=".6"/>
-  <mask id="a" width="38" height="38" x="5" y="5" maskUnits="userSpaceOnUse" style="mask-type:alpha">
-    <rect width="38" height="38" x="5" y="5" fill="#9FA4A9" rx="4"/>
-  </mask>
-  <g mask="url(#a)">
-    <path fill="#000" d="M25.813 17.237a7 7 0 104.95 4.95l-2.917 2.917A4.002 4.002 0 0120 24a4.002 4.002 0 012.896-3.846l2.917-2.917z"/>
-    <path fill="#000" d="M30.38 12.67A12.94 12.94 0 0024 11c-7.18 0-13 5.82-13 13s5.82 13 13 13 13-5.82 13-13a12.94 12.94 0 00-1.67-6.38l-2.23 2.23c.578 1.263.9 2.67.9 4.15 0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10c1.48 0 2.887.322 4.15.9l2.23-2.23z"/>
-  </g>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.2" x="5" y="5" width="38" height="38" rx="4" fill="black"/>
+<path opacity="0.6" d="M24 24L38 10" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<mask id="mask0_34:8" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="38" height="38">
+<rect x="5" y="5" width="38" height="38" rx="4" fill="#9FA4A9"/>
+</mask>
+<g mask="url(#mask0_34:8)">
+<path d="M25.8132 17.2371C25.2349 17.0824 24.6271 17 24 17C20.134 17 17 20.134 17 24C17 27.866 20.134 31 24 31C27.866 31 31 27.866 31 24C31 23.3729 30.9175 22.7651 30.7629 22.1868L27.8457 25.1041C27.3665 26.7762 25.8262 28 24 28C21.7909 28 20 26.2091 20 24C20 22.1738 21.2238 20.6335 22.8959 20.1543L25.8132 17.2371Z" fill="black"/>
+<path d="M30.3798 12.6705C28.4951 11.6069 26.3184 11 24 11C16.8203 11 11 16.8203 11 24C11 31.1797 16.8203 37 24 37C31.1797 37 37 31.1797 37 24C37 21.6816 36.3931 19.5049 35.3295 17.6202L33.1005 19.8492C33.6781 21.1135 34 22.5192 34 24C34 29.5229 29.5229 34 24 34C18.4772 34 14 29.5229 14 24C14 18.4772 18.4772 14 24 14C25.4808 14 26.8865 14.3219 28.1508 14.8995L30.3798 12.6705Z" fill="black"/>
+</g>
 </svg>

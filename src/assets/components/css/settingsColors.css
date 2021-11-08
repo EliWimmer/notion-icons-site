@@ -14,9 +14,9 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 4px;
     background-color: black;
-    transition: 1s;
+    transition: border-radius .8s ease-in-out, transform 1.6s, box-shadow 1.4s ease-in-out;
 }
 
 .color-option:hover {
@@ -26,8 +26,8 @@
 
 .active-color {
     /* animation: shadowpulse 1s infinite; */
-    transform: scale(1.1) rotate(-90deg);
-    box-shadow: -6px 0px 12px -2px rgba(0, 0, 0, .6);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px -2px rgba(0, 0, 0, .6);
     border-radius: 24px;
 }
 
@@ -59,3 +59,7 @@
       filter: invert(58%) sepia(33%) saturate(666%) hue-rotate(308deg) brightness(104%) contrast(84%);
     }
 
+  .splash-true {
+    position: relative;
+    top: -200px;
+    }

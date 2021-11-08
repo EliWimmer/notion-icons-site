@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
-  <rect width="38" height="38" x="5" y="5" fill="#000" opacity=".2" rx="4"/>
-  <path fill="#000" fill-rule="evenodd" d="M35.653 27.768A4 4 0 1037 20v2.031a1.969 1.969 0 11-.589 3.848 12.923 12.923 0 01-.758 1.889z" clip-rule="evenodd" opacity=".6"/>
-  <path fill="#000" d="M36.328 17.934c-5.385-3.912-19.271-3.912-24.656 0-.45.327-.672.866-.672 1.422V22C11 29.18 16.82 35 24 35s13-5.822 13-13.001v-2.646c0-.556-.222-1.092-.672-1.42z" opacity=".6"/>
-  <ellipse cx="24" cy="19" fill="#000" rx="11" ry="3.097"/>
-</svg>
