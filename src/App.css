@@ -180,7 +180,7 @@ h1 {
 }
 
 .logo .phone {
-  opacity: 40%;
+  filter: opacity(.5);
   width: 512px;
   position: absolute;
   left: 0px;
@@ -193,7 +193,7 @@ h1 {
 }
 
 .logo .mic {
-  opacity: 40%;
+  filter: opacity(.5);
   width: 512px;
   position: absolute;
   right: -5%;
@@ -206,7 +206,7 @@ h1 {
 }
 
 .logo .sun {
-  opacity: 40%;
+  filter: opacity(.5);
   width: 512px;
   position: absolute;
   left: 10%;
@@ -219,7 +219,7 @@ h1 {
 }
 
 .logo .notionbg {
-  opacity: 40%;
+  filter: opacity(.5);
   width: 512px;
   position: absolute;
   left: 60%;
@@ -234,7 +234,7 @@ h1 {
 
 
 .splash-floaters-false {
-  opacity: 0%;
+  opacity: .1;
   width: 0px;
   height: 0px;
 }
@@ -251,7 +251,7 @@ h1 {
   height: 32px;
   width: auto;
   margin-left: 16px;
-  opacity: 80%;
+  opacity: 0.8;
   transition: 2s;
   transition-delay: 2s;
   position: relative;
@@ -260,7 +260,7 @@ h1 {
 
 .logo-container img:hover {
   cursor: pointer;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .splash-toggle-true img{
@@ -268,7 +268,7 @@ h1 {
   left: -50px;
   transition: 2s;
   transition-delay: 1.5s;
-  opacity: 0%;
+  opacity: .01;
 }
 
 .logo-container {
@@ -408,7 +408,6 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-
   width: 70%;
   height: fit-content;
   transition: 2s;
@@ -620,7 +619,7 @@ h1 {
   .icon-folders {
     flex-direction: column;
     align-items: center;
-    padding: 32pxpx 0px;
+    
     margin: 32px;
     background: none;
     overflow-y: scroll;
@@ -646,6 +645,7 @@ h1 {
   .icon-folders.show-menu-false {
     backdrop-filter: blur(0px);
     margin: 32px 0px;
+    padding: 0px;
   }
 
   .icon-folders.show-menu-true.darkmode-true {
@@ -670,7 +670,7 @@ h1 {
     padding: 0px;
   }
   .icon-grid {
-    grid-gap: 24px;
+    grid-gap: 20px;
     margin-top: 32px;
   }
 
