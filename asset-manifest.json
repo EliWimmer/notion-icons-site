@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.acfc9fa5.chunk.css",
-    "main.js": "/static/js/main.626d6d65.chunk.js",
-    "main.js.map": "/static/js/main.626d6d65.chunk.js.map",
+    "main.js": "/static/js/main.778d62b1.chunk.js",
+    "main.js.map": "/static/js/main.778d62b1.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e694a8bb.js",
     "runtime-main.js.map": "/static/js/runtime-main.e694a8bb.js.map",
     "static/js/2.fa7807ba.chunk.js": "/static/js/2.fa7807ba.chunk.js",
@@ -337,7 +337,6 @@
     "static/media/months,simple,november-11.svg": "/static/media/months,simple,november-11.682cf185.svg",
     "static/media/months,simple,october-10.svg": "/static/media/months,simple,october-10.a632d673.svg",
     "static/media/months,simple,september-9.svg": "/static/media/months,simple,september-9.7b3a9967.svg",
-    "static/media/nature-elements,fancy,cloudy-day-1.svg": "/static/media/nature-elements,fancy,cloudy-day-1.87f8a73f.svg",
     "static/media/nature-elements,fancy,cloudy-day.svg": "/static/media/nature-elements,fancy,cloudy-day.87f8a73f.svg",
     "static/media/nature-elements,fancy,cloudy-night.svg": "/static/media/nature-elements,fancy,cloudy-night.552da00e.svg",
     "static/media/nature-elements,fancy,fire.svg": "/static/media/nature-elements,fancy,fire.76cf4c55.svg",
@@ -659,6 +658,6 @@
     "static/js/runtime-main.e694a8bb.js",
     "static/js/2.fa7807ba.chunk.js",
     "static/css/main.acfc9fa5.chunk.css",
-    "static/js/main.626d6d65.chunk.js"
+    "static/js/main.778d62b1.chunk.js"
   ]
 }
