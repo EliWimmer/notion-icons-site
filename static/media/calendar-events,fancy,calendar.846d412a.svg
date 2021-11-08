@@ -1,0 +1,18 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.2" x="4" y="6" width="40" height="40" rx="4" fill="black"/>
+<g opacity="0.4">
+<path d="M10 4C10 2.89543 10.8954 2 12 2C13.1046 2 14 2.89543 14 4V8C14 9.10457 13.1046 10 12 10C10.8954 10 10 9.10457 10 8V4Z" fill="black"/>
+<path d="M34 4C34 2.89543 34.8954 2 36 2C37.1046 2 38 2.89543 38 4V8C38 9.10457 37.1046 10 36 10C34.8954 10 34 9.10457 34 8V4Z" fill="black"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 6.00869C7.52043 6.04456 6.11466 6.22849 5.17157 7.17157C4 8.34315 4 10.2288 4 14V16H44V14C44 10.2288 44 8.34315 42.8284 7.17157C41.8853 6.22849 40.4796 6.04456 38 6.00869V8C38 9.10457 37.1046 10 36 10C34.8954 10 34 9.10457 34 8V6H14V8C14 9.10457 13.1046 10 12 10C10.8954 10 10 9.10457 10 8V6.00869Z" fill="black"/>
+<rect opacity="0.6" x="10" y="29" width="4" height="4" rx="1" fill="black"/>
+<rect opacity="0.6" x="10" y="37" width="4" height="4" rx="1" fill="black"/>
+<rect opacity="0.6" x="18" y="21" width="4" height="4" rx="1" fill="black"/>
+<rect opacity="0.6" x="18" y="29" width="4" height="4" rx="1" fill="black"/>
+<rect opacity="0.6" x="18" y="37" width="4" height="4" rx="1" fill="black"/>
+<rect opacity="0.6" x="26" y="21" width="4" height="4" rx="1" fill="black"/>
+<rect x="24" y="27" width="8" height="8" rx="2" fill="black"/>
+<rect opacity="0.6" x="26" y="37" width="4" height="4" rx="1" fill="black"/>
+<rect opacity="0.6" x="34" y="21" width="4" height="4" rx="1" fill="black"/>
+<rect opacity="0.6" x="34" y="29" width="4" height="4" rx="1" fill="black"/>
+</svg>
