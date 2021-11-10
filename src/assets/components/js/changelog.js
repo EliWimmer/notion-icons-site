@@ -1,6 +1,18 @@
 export default function Changelog() {
   const changelog = [
     {
+      version: '1.2.0',
+      date: '2021-08-11',
+      app: [
+        "Changed how icons both download and render. Copying link will provide icons that look incredibly sharp in Notion, and load instantly.",
+        "Small UI Update."
+      ],
+      icons: ["-"],
+      fixes: [
+        "-"
+      ]
+    },
+    {
       version: "1.1.0",
       date: "2021-11-7",
       app: [
@@ -137,14 +149,14 @@ export default function Changelog() {
                     <img
                       style = {{"margin":"4px","height":"24px"}}
                       className="gray"
-                      key={index}
+                      key={index + icon.category + "fancy"}
                       src={`https://raw.githubusercontent.com/EliWimmer/notion-icons-site/master/src/assets/icons/${icon.category},simple,${icon.name}.svg`}
                       alt={icon.name}
                     />
                     <img
                       style = {{"margin":"4px","height":"24px"}}
                       className="gray"
-                      key={index}
+                      key={index + icon.name + "simple"}
                       src={`https://raw.githubusercontent.com/EliWimmer/notion-icons-site/master/src/assets/icons/${icon.category},fancy,${icon.name}.svg`}
                       alt={icon.name}
                     />
