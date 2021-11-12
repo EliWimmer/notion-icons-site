@@ -10,7 +10,6 @@ import NotificationPopup from "./assets/components/js/NotificationPopup";
 import InfoModal from "./assets/components/js/infoModal";
 import Changelog from "./assets/components/js/changelog";
 import domtoimage from "dom-to-image";
-import notionAPI from "./assets/components/js/notionAPI";
 
 import link from "./assets/uiIcons/link.svg";
 import download from "./assets/uiIcons/download.svg";
@@ -122,7 +121,6 @@ function App() {
 
   // FUNCTIONS
 
-  notionAPI();
 
   function handleSearch(e) {
     e.preventDefault();
@@ -163,20 +161,20 @@ function App() {
         xhr.send();
       });
     }
-    const getImgData = (url) => new Promise((res,rej) => fetch(url).then(res => res.blob()).then(blob => {
-      const reader = new FileReader();
-      reader.onload = (e) => res(e.target.result);
-      console.log(res.blob)
-      reader.readAsDataURL(blob);
-    }));
+    // const getImgData = (url) => new Promise((res,rej) => fetch(url).then(res => res.blob()).then(blob => {
+    //   const reader = new FileReader();
+    //   reader.onload = (e) => res(e.target.result);
+    //   console.log(res.blob)
+    //   reader.readAsDataURL(blob);
+    // }));
 
-    console.log(getImgData(url.icon.target.src))
-    const baseSvg = await getImgData(url.icon.target.src);
-    const convertedSvg =
+    const baseSvg = await getter(url.icon.target.src);
+    const convertedSvg = "data:image/svg+xml;base64," + 
+    btoa(
         baseSvg
           .replaceAll('fill="black"', `fill="${color.colorHex}"`)
           .replace('width="48" height="48"', `width="512" height="512"`)
-
+          )
     //copy converted svg to clipboard
     if (!downloadMode) {
      // copy converted svg to clipboard
