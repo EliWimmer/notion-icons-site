@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.b45f769b.chunk.css",
-    "main.js": "/static/js/main.649b19b3.chunk.js",
-    "main.js.map": "/static/js/main.649b19b3.chunk.js.map",
+    "main.js": "/static/js/main.f73f9b1f.chunk.js",
+    "main.js.map": "/static/js/main.f73f9b1f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e694a8bb.js",
     "runtime-main.js.map": "/static/js/runtime-main.e694a8bb.js.map",
     "static/js/2.bae0647d.chunk.js": "/static/js/2.bae0647d.chunk.js",
@@ -491,8 +491,8 @@
     "static/media/time,fancy,clock.svg": "/static/media/time,fancy,clock.42048c9e.svg",
     "static/media/time,fancy,moon-night-time.svg": "/static/media/time,fancy,moon-night-time.198f30c1.svg",
     "static/media/time,fancy,sun-day-time.svg": "/static/media/time,fancy,sun-day-time.c13f5ff3.svg",
-    "static/media/time,fancy,sunrise-time.svg": "/static/media/time,fancy,sunrise-time.c9ed430c.svg",
-    "static/media/time,fancy,sunset-time.svg": "/static/media/time,fancy,sunset-time.1a29c990.svg",
+    "static/media/time,fancy,sunrise-time.svg": "/static/media/time,fancy,sunrise-time.b4d01abd.svg",
+    "static/media/time,fancy,sunset-time.svg": "/static/media/time,fancy,sunset-time.9d0a23d1.svg",
     "static/media/time,simple,clock.svg": "/static/media/time,simple,clock.b7af4194.svg",
     "static/media/time,simple,moon-night-time.svg": "/static/media/time,simple,moon-night-time.965590ff.svg",
     "static/media/time,simple,sun-day-time.svg": "/static/media/time,simple,sun-day-time.ee12c328.svg",
@@ -656,6 +656,6 @@
     "static/js/runtime-main.e694a8bb.js",
     "static/js/2.bae0647d.chunk.js",
     "static/css/main.b45f769b.chunk.css",
-    "static/js/main.649b19b3.chunk.js"
+    "static/js/main.f73f9b1f.chunk.js"
   ]
 }
